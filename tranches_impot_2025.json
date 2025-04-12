@@ -2,6 +2,33 @@ let TRANCHES_IMPOT = [];
 
 async function chargerTranchesImpot() {
     try {
+    [
+    {
+        "min": 0,
+        "max": 11294,
+        "taux": 0
+    },
+    {
+        "min": 11295,
+        "max": 28797,
+        "taux": 11
+    },
+    {
+        "min": 28798,
+        "max": 82341,
+        "taux": 30
+    },
+    {
+        "min": 82342,
+        "max": 177106,
+        "taux": 41
+    },
+    {
+        "min": 177107,
+        "max": null,
+        "taux": 45
+    }
+]
         const response = await fetch("https://fiche-paie.github.io/lebestexpert/tranches_impot_2025.json");
         const data = await response.json();
         TRANCHES_IMPOT = data.map(t => ({
