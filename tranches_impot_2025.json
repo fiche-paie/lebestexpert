@@ -1,27 +1,8 @@
-[
-    {
-        "min": 0,
-        "max": 11294,
-        0
-    },
-    {
-        "min": 11295,
-        "max": 28797,
-        "taux": 11
-    },
-    {
-        "min": 28798,
-        "max": 82341,
-        "taux": 30
-    },
-    {
-        "min": 82342,
-        "max": 177106,
-        "taux": 41
-    },
-    {
-        "min": 177107,
-        "max": null,
-        "taux": 45
-    }
+
 ]
+           { min: 0, max: 11294, taux: 0 },         // Tranche 1
+            { min: 11295, max: 28797, taux: 11 },     // Tranche 2
+            { min: 28798, max: 82341, taux: 30 },     // Tranche 3
+            { min: 82342, max: 177106, taux: 41 },    // Tranche 4
+            { min: 177107, max: Infinity, taux: 45 }  // Tranche 5
+        ];
