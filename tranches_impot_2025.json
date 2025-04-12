@@ -1,0 +1,6 @@
+fetch('tranchepart.json')
+  .then(response => response.json())
+  .then(data => {
+      TRANCHES_IMPOT = data;
+      calculerTauxImpot(); // appel après chargement
+  });
