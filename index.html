@@ -161,11 +161,9 @@
 </button>
 <small id="helpImpot" style="display:block; margin-top:6px; color:#666;">Estimé sur un brut annuel de 24934.56€ (1 part)</small>
 <script>
-let TRANCHES_IMPOT = [];
-
 async function chargerTranchesImpot() {
     try {
-const response = await fetch("https://fiche-paie.github.io/lebestexpert/tranches_impot_2025.json");
+        const response = await fetch("https://fiche-paie.github.io/lebestexpert/tranches_impot_2025.json");
         const data = await response.json();
         TRANCHES_IMPOT = data.map(t => ({
             min: t.min,
@@ -174,9 +172,11 @@ const response = await fetch("https://fiche-paie.github.io/lebestexpert/tranches
         }));
     } catch (error) {
         console.error("Erreur de chargement des tranches :", error);
-        alert("Impossible de charger les tranches d'imposition à jour.");
+        alert("Impossible de charger les tranches d'imposition.");
     }
 }
+
+
 
 chargerTranchesImpot();
 function calculerTauxImpot() {
