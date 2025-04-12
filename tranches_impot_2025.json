@@ -1,6 +1,6 @@
-fetch('tranchepart.json')
-  .then(response => response.json())
-  .then(data => {
-      TRANCHES_IMPOT = data;
-      calculerTauxImpot(); // appel après chargement
-  });
+TRANCHES_IMPOT = [
+    { min: 0, max: 11294, taux: 0 },
+    { min: 11295, max: 28797, taux: 11 },
+    { min: 28798, max: 82341, taux: 30 },
+    ...
+];
