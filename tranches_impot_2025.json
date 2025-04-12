@@ -1,7 +1,4 @@
-let TRANCHES_IMPOT = [];
 
-async function chargerTranchesImpot() {
-    try {
     [
     {
         "min": 0,
